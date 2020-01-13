@@ -1,4 +1,4 @@
-const Main = require('./js/main');
+const Main = require('./js/Main.js');
 let main = new Main({
 	el:'.app',
 })

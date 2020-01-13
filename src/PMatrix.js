@@ -1,2 +1,2 @@
-const Main = require('./js/main');
+const Main = require('./js/Main.js');
 module.exports = Main;
