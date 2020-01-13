@@ -38,7 +38,11 @@ npm i p-digital-matrix -s
 				fontSize:20,//字符的字号
 				color:'red',//字符的颜色
 				backgroundColor:'green',//字符的背景颜色
-				maxSpeed:20//随机下落的最大速度
+				maxSpeed:20,//随机下落的最大速度
+				opacity:1,//字体与背景整体透明度
+				maxSpeed:2,//最大初始下落速度
+				maxDelay:1000,//每个模块的最大等待时间
+				wordMaxLength:10//最大初始长度
 			})
 			main.start()
 			window.onresize = function(){
@@ -55,7 +59,11 @@ npm i p-digital-matrix -s
   	fontSize:20,//字符的字号
   	color:'red',//字符的颜色
   	backgroundColor:'green',//字符的背景颜色
-  	maxSpeed:20//随机下落的最大速度
+  	maxSpeed:20,//随机下落的最大速度
+  	opacity:1,//字体与背景整体透明度
+  	maxSpeed:2,//最大初始下落速度
+  	maxDelay:1000,//每个模块的最大等待时间
+  	wordMaxLength:10//最大初始长度
   })
   main.start()
   window.onresize = function(){

@@ -26,20 +26,26 @@ class Main {
 		this.wordList = [];
 		this.fontSize = arg.fontSize || 20;
 		this.maxSpeed = arg.maxSpeed || 20;
+		this.wordMaxLength = arg.wordMaxLength || 10
 		this.color = arg.color||`rgb(67,136,234)`;
+		this.opacity = arg.opacity||1;
+		this.maxDelay = arg.maxDelay||100;
 		this.backgroundColor = arg.backgroundColor||`rgb(67,136,234)`;
 		this.wordListLength = Math.round(this.canvas.width / this.fontSize);
 		for (let i = 0; i < this.wordListLength; i++) {
-			let length = Math.round(Math.random() * 20 + 1)
+			let length = Math.round(Math.random() * this.wordMaxLength + 5)
 			let obj = {
 				length: length,
+				maxLength :this.wordMaxLength,
 				size: this.fontSize,
 				x: i * this.fontSize,
 				y: 0 - (this.fontSize * length),
 				canvas: this.canvas,
 				color:this.color,
 				backgroundColor:this.backgroundColor,
-				maxSpeed:this.maxSpeed
+				maxSpeed:this.maxSpeed,
+				opacity:this.opacity,
+				maxDelay:this.maxDelay
 			}
 			this.wordList.push(new WordList(obj))
 		}

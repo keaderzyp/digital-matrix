@@ -6,7 +6,7 @@ class Word {
 			this.word = this.randomWord();
 			this.x = arg.x||0;
 			this.y = arg.y||0;
-			this.opacity = arg.opacity||1;
+			this.opacity = arg.opacity;
 			this.color = arg.color||`rgb(67,136,234)`;
 			this.backgroundColor = arg.backgroundColor||`rgb(67,136,234)`;
 			this.down = arg.down||false;
