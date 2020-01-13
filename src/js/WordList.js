@@ -4,7 +4,7 @@ class WordList {
 	   if(arg){
 		   this.canvas = arg.canvas;
 		   this.maxLength = arg.maxLength;
-		   this.length = Math.floor(Math.random()*this.maxLength)+4;
+		   this.length = arg.length;
 		   this.color = arg.color||`rgb(67,136,234)`;
 		   this.backgroundColor = arg.backgroundColor||`rgb(67,136,234)`;
 		   this.x = arg.x||0;
@@ -31,15 +31,16 @@ class WordList {
 	render(ctx){
 		if(this.y<=this.canvas.height){
 			if(this.delay<=0){
-				if(this.down){
-					this.y+=this.speed;
-					this.speed+=0.1;
-				}
 				for(let i = 0;i<this.length;i++){
 					this.children[i].down = this.down;
 					this.children[i].y = this.y+(i*this.size)
 					this.children[i].render(ctx)
 				}
+				if(this.down){
+					this.y+=this.speed;
+					this.speed+=0.1;
+				}
+				
 			}else{
 				this.delay--;
 			}

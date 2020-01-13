@@ -33,7 +33,7 @@ class Main {
 		this.backgroundColor = arg.backgroundColor||`rgb(67,136,234)`;
 		this.wordListLength = Math.round(this.canvas.width / this.fontSize);
 		for (let i = 0; i < this.wordListLength; i++) {
-			let length = Math.round(Math.random() * this.wordMaxLength + 5)
+			let length = Math.round(Math.random() * this.wordMaxLength + 4)
 			let obj = {
 				length: length,
 				maxLength :this.wordMaxLength,
